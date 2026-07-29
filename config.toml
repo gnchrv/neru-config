@@ -380,7 +380,7 @@ interval_ms = 50                        # Interval between subsequent repeats (m
 # Systray
 # See https://github.com/y3owk1n/neru/blob/main/docs/CONFIGURATION.md#systray
 [systray]
-enabled = true                              # Show menu bar icon (false = headless mode)
+enabled = false                             # Show menu bar icon (false = headless mode)
 
 # Logging
 # See https://github.com/y3owk1n/neru/blob/main/docs/CONFIGURATION.md#logging
