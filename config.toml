@@ -37,9 +37,10 @@ text = "#E8EEFF"
 # See https://github.com/y3owk1n/neru/blob/main/docs/CLI.md
 [hotkeys]
 "Cmd+Ctrl+Alt+Shift+Space" = "hints"   # Hyper+Space
-"Primary+Shift+G" = "grid"
-"Primary+Shift+C" = "recursive_grid"
-"Primary+Shift+S" = "scroll"
+# All non-hint modes are disabled for now.
+# "Primary+Shift+G" = "grid"
+# "Primary+Shift+C" = "recursive_grid"
+# "Primary+Shift+S" = "scroll"
 
 # Hint mode
 # See https://github.com/y3owk1n/neru/blob/main/docs/CONFIGURATION.md#hints
@@ -152,12 +153,12 @@ generic_clickable_min_confidence = 0.5       # Minimum confidence for generic cl
 # Grid mode
 # See https://github.com/y3owk1n/neru/blob/main/docs/CONFIGURATION.md#grid
 [grid]
-enabled = true
+enabled = false
 characters = "abcdefghijklmnpqrstuvwxyz"    # Primary grid labels
 sublayer_keys = "abcdefghijklmnpqrstuvwxyz" # Subgrid labels (fallback to characters)
 live_match_update = true                    # Highlight cells as you type
 hide_unmatched = true                       # Hide non-matching cells
-prewarm_enabled = true                      # Pre-compute grid on startup (~1.5MB RAM)
+prewarm_enabled = false                     # Pre-compute grid on startup (~1.5MB RAM)
 enable_gc = false                           # Periodic memory cleanup (adds CPU overhead)
 
 [grid.hotkeys]
@@ -184,7 +185,7 @@ border_width = 1
 # Recursive grid mode (recommended)
 # See https://github.com/y3owk1n/neru/blob/main/docs/CONFIGURATION.md#recursive_grid
 [recursive_grid]
-enabled = true
+enabled = false
 grid_cols = 3                               # Number of columns (>= 1)
 grid_rows = 3                               # Number of rows (>= 1)
 keys = "rtyfghvbn"                          # Cell selection keys (must be grid_cols * grid_rows chars)
@@ -310,7 +311,7 @@ invert_scroll = false                       # Invert scroll direction (for tools
 [mode_indicator]
 
 [mode_indicator.scroll]
-enabled = true
+enabled = false
 text = "Scroll"
 
 [mode_indicator.hints]
