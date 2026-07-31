@@ -104,7 +104,7 @@ visible_check_enabled = false
 "Right" = "action move_mouse_relative --dx=10 --dy=0"
 
 [hints.ui]
-font_size = 10
+font_size = 11
 font_family = ""                            # Empty = system font
 border_radius = -1                          # -1 = auto pill
 padding_x = -1                              # -1 = auto based on font size
