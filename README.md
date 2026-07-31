@@ -23,7 +23,9 @@ The script symlinks `config.toml` into `~/.config/neru/config.toml` (or `$XDG_CO
 config.toml.backup.20260729155325
 ```
 
-It links the file rather than the directory, so runtime files neru writes beside its config stay out of this repo. Afterwards, `neru config reload`, or `neru launch` if the daemon isn't running.
+It links the file rather than the directory, so runtime files neru writes beside its config stay out of this repo.
+
+If neru itself is missing, the script offers to install it through Homebrew, printing the exact commands and waiting for a `y` first. It targets the tagged release line, the `y3owk1n/tap/neru` cask, not `neru-nightly`. Answering no leaves the link in place, so the config is ready whenever neru arrives.
 
 ## Hints
 
