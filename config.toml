@@ -93,6 +93,7 @@ visible_check_enabled = false
 "Tab" = "action cycle_hint"
 "Shift+Tab" = "action cycle_hint --backward"
 "Space" = ["action left_click", "idle"]     # click, then hide hints
+"Shift+Space" = ["action left_click --modifier cmd", "idle"]   # Cmd+click, then hide hints
 "Shift+L" = "__disabled__"
 "Shift+R" = "action right_click"
 "Shift+M" = "action middle_click"

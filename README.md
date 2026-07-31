@@ -57,6 +57,7 @@ Inside the mode:
 | Key | Does |
 | --- | --- |
 | `Space` | Left click, then leave the mode |
+| `Shift+Space` | Cmd+click, then leave the mode |
 | `Shift+R` / `Shift+M` | Right click / middle click |
 | `Shift+I` / `Shift+U` | Mouse down / mouse up, for dragging |
 | `/` | Filter hints by the element's text |
@@ -65,6 +66,8 @@ Inside the mode:
 | `Escape` | Leave |
 
 Upstream's left click is `Shift+L`, which needs a modifier mid-navigation and leaves the overlay up, so a click took three keystrokes with an `Escape` at the end. `Space` does both here. The old binding stays in the file as `"Shift+L" = "__disabled__"`, which records what upstream ships without it firing.
+
+`Shift+Space` is the same click with Cmd held — `action left_click --modifier cmd` — which is what opens a link in a background tab. Every click action takes `--modifier`, so `shift`, `alt`, `ctrl`, and comma-separated combinations bind the same way.
 
 The menu bar gets hints too, so the focused app's menus (`File`, `Edit`, `View`) and third-party status items are clickable from hints mode. The cost is that every menu title now carries a label, so each activation shows more of them than before.
 
