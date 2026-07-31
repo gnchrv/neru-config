@@ -46,7 +46,9 @@ Validating first is the point of the pair: `reload` on broken TOML is a failed r
 
 `Hyper+Space` (`Cmd+Ctrl+Alt+Shift+Space`) draws a label on every clickable element. Type the label to select it.
 
-Labels use the home row, `asdfghjkl`, so both hands stay put. Elements come from the accessibility tree (`strategy = "axtree"`), not from Vision, which means the labels sit on real controls rather than on guesses about pixels.
+Labels use `asdfqwerzxcv`, the left hand's four columns, so the right hand is free and never has to find its place again. Order matters: with `label_direction = "normal"`, neru spends the front of the string on single-key labels and only extends the tail into two-key ones, so the home row goes first, then the top row, then the bottom. The index-finger stretch to `g`, `t`, and `b` is left out; the cost is that a crowded window reaches two-key labels twelve elements in instead of fifteen.
+
+Elements come from the accessibility tree (`strategy = "axtree"`), not from Vision, which means the labels sit on real controls rather than on guesses about pixels.
 
 Inside the mode:
 
