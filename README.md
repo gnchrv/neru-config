@@ -3,11 +3,11 @@
 [![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=fff)](https://www.apple.com/macos/)
 [![neru](https://img.shields.io/badge/neru-upstream-465FBC)](https://github.com/y3owk1n/neru)
 [![config](https://img.shields.io/badge/config-TOML-9C4221?logo=toml&logoColor=fff)](config.toml)
-[![modes](https://img.shields.io/badge/modes-hints%20only-465FBC)](#hints)
+[![modes](https://img.shields.io/badge/modes-hints%20%2B%20recursive%20grid-465FBC)](#hints)
 
 > My [neru](https://github.com/y3owk1n/neru) config: one shortcut labels every clickable thing on screen, then you type the label and hit `Space`.
 
-neru moves and clicks the macOS pointer from the keyboard. It ships with four modes; this config keeps one.
+neru moves and clicks the macOS pointer from the keyboard. It ships with four modes; this config keeps two.
 
 The first commit is the template `neru config init` writes for v1.49.0, byte for byte. Every commit after it changes one default and says why, so `git log` reads as the list of decisions and `git diff f2ceb52` shows everything that differs from upstream.
 
@@ -51,9 +51,15 @@ Apple's own Control Center items (clock, Wi-Fi, battery) get no hints, despite b
 
 The Dock, Notification Center, Stage Manager, and picture-in-picture windows get no hints by choice.
 
+## Recursive grid
+
+Double-tapping Capslock fires `F17` (see the [capslock](https://github.com/y3owk1n/capslock) interceptor config at `~/.config/capslock/config.json`), which activates recursive grid. Cmd+Shift+C, the upstream default, is unbound.
+
+Recursive grid subdivides the screen into a 3x3 grid; typing a cell's key zooms into it, recursively, until the cursor lands where you want it. Cell keys are `qweasdzxc`, the left hand's home block, matching the grid to the fingers that reach it. `Space` clicks, then leaves the mode, same as hints. Upstream's click key, `Enter`, now resets the zoom back to the full grid.
+
 ## Everything else
 
-Grid, recursive grid, scroll, and monitor-select are off, and their `[hotkeys]` bindings are commented out. Their settings and keymaps stay in the file, so turning one back on means flipping `enabled` and uncommenting one line.
+Grid, scroll, and monitor-select are off, and their `[hotkeys]` bindings are commented out. Their settings and keymaps stay in the file, so turning one back on means flipping `enabled` and uncommenting one line.
 
 Also on:
 
