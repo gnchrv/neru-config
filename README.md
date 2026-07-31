@@ -27,6 +27,21 @@ It links the file rather than the directory, so runtime files neru writes beside
 
 If neru itself is missing, the script offers to install it through Homebrew, printing the exact commands and waiting for a `y` first. It targets the tagged release line, the `y3owk1n/tap/neru` cask, not `neru-nightly`. Answering no leaves the link in place, so the config is ready whenever neru arrives.
 
+## Reloading after a change
+
+The config is hot-reloadable, and the installed path is a symlink into this repo, so editing `config.toml` here is editing the live file. Two commands apply it:
+
+```sh
+neru config validate   # parse it before the daemon sees it
+neru config reload     # hotkeys, colors, and behaviour take effect immediately
+```
+
+Validating first is the point of the pair: `reload` on broken TOML is a failed reload, and the daemon keeps running on what it already had.
+
+`neru launch` reads the file at start, so a daemon that isn't running needs that instead of `reload`; `neru status` says which case you're in. To see what the daemon actually holds rather than what the file says, `neru config dump` prints the active config as JSON.
+
+`neru config set` changes a field at runtime without touching the file. That's for trying something out — the next `reload` drops it. Anything worth keeping goes into `config.toml` and gets committed.
+
 ## Hints
 
 `Hyper+Space` (`Cmd+Ctrl+Alt+Shift+Space`) draws a label on every clickable element. Type the label to select it.
