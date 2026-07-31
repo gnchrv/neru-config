@@ -47,7 +47,7 @@ text = "#E8EEFF"
 [hints]
 enabled = true
 strategy = "axtree"                         # Element detection: "axtree" (AX API) or "vision" (Vision Framework)
-hint_characters = "asdfqwerzxcv"            # Hint labels, left hand, home row first
+hint_characters = "asdfqwer1234"            # Hint labels, left hand, home row first
 label_direction = "normal"                  # Hint label algorithm: "normal" (default) or "reverse"
 max_depth = 50                              # Max accessibility tree depth (0 = unlimited)
 include_menubar_hints = true
