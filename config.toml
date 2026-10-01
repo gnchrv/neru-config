@@ -99,10 +99,10 @@ visible_check_enabled = false
 "Shift+M" = "action middle_click"
 "Shift+I" = "action mouse_down"
 "Shift+U" = "action mouse_up"
-"Up" = "action move_mouse_relative --dx=0 --dy=-10"
-"Down" = "action move_mouse_relative --dx=0 --dy=10"
-"Left" = "action move_mouse_relative --dx=-10 --dy=0"
-"Right" = "action move_mouse_relative --dx=10 --dy=0"
+"k" = "action move_mouse_relative --dx=0 --dy=-10"
+"j" = "action move_mouse_relative --dx=0 --dy=10"
+"h" = "action move_mouse_relative --dx=-10 --dy=0"
+"l" = "action move_mouse_relative --dx=10 --dy=0"
 
 [hints.ui]
 font_size = 11

@@ -62,7 +62,7 @@ Inside the mode:
 | `Shift+I` / `Shift+U` | Mouse down / mouse up, for dragging |
 | `/` | Filter hints by the element's text |
 | `Tab` / `Shift+Tab` | Step through matches |
-| Arrows | Nudge the cursor 10px |
+| `h` `j` `k` `l` | Nudge the cursor 10px left, down, up, right |
 | `Escape` | Leave |
 
 Upstream's left click is `Shift+L`, which needs a modifier mid-navigation and leaves the overlay up, so a click took three keystrokes with an `Escape` at the end. `Space` does both here. The old binding stays in the file as `"Shift+L" = "__disabled__"`, which records what upstream ships without it firing.
