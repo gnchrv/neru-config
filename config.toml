@@ -94,7 +94,6 @@ visible_check_enabled = false
 "Shift+Tab" = "action cycle_hint --backward"
 "Space" = ["action left_click", "idle"]     # click, then hide hints
 "Shift+Space" = ["action left_click --modifier cmd", "idle"]   # Cmd+click, then hide hints
-"Shift+L" = "__disabled__"
 "Shift+R" = "action right_click"
 "Shift+M" = "action middle_click"
 "Shift+I" = "action mouse_down"
@@ -103,6 +102,10 @@ visible_check_enabled = false
 "j" = "action move_mouse_relative --dx=0 --dy=10"
 "h" = "action move_mouse_relative --dx=-10 --dy=0"
 "l" = "action move_mouse_relative --dx=10 --dy=0"
+"Shift+K" = "action move_mouse_relative --dx=0 --dy=-75"
+"Shift+J" = "action move_mouse_relative --dx=0 --dy=75"
+"Shift+H" = "action move_mouse_relative --dx=-75 --dy=0"
+"Shift+L" = "action move_mouse_relative --dx=75 --dy=0"   # replaces upstream's left click
 
 [hints.ui]
 font_size = 11

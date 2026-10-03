@@ -63,9 +63,10 @@ Inside the mode:
 | `/` | Filter hints by the element's text |
 | `Tab` / `Shift+Tab` | Step through matches |
 | `h` `j` `k` `l` | Nudge the cursor 10px left, down, up, right |
+| `Shift+H` `Shift+J` `Shift+K` `Shift+L` | The same nudge in 75px steps |
 | `Escape` | Leave |
 
-Upstream's left click is `Shift+L`, which needs a modifier mid-navigation and leaves the overlay up, so a click took three keystrokes with an `Escape` at the end. `Space` does both here. The old binding stays in the file as `"Shift+L" = "__disabled__"`, which records what upstream ships without it firing.
+Upstream's left click is `Shift+L`, which needs a modifier mid-navigation and leaves the overlay up, so a click took three keystrokes with an `Escape` at the end. `Space` does both here. `Shift+L` is rebound to the 75px nudge to the right, which also overrides the upstream click in this mode. The other modes still carry `"Shift+L" = "__disabled__"`.
 
 `Shift+Space` is the same click with Cmd held — `action left_click --modifier cmd` — which is what opens a link in a background tab. Every click action takes `--modifier`, so `shift`, `alt`, `ctrl`, and comma-separated combinations bind the same way.
 
